@@ -1,69 +1,59 @@
-<% @title = "Making requests" %>
+<% @title = "Solicitar información" %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip" class="left_column_flip">
   <h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a></h1>
   <dl>
 
-    <dt id="which_authority">I'm not sure which authority to make my request to, how can I find out? <a href="#which_authority">#</a> </dt>
+    <dt id="which_authority">No sé a qué autoridad debería presentar mi solicitud, ¿cómo puedo averiguarlo? <a href="#which_authority">#</a> </dt>
 
     <dd>
-      <p>It can be hard to untangle government's complicated structure, and work out
-        who holds the information that you want. Here are a few tips:
+      <p>Puede ser difícil desenredar la complicada estructura del Estado y determinar quién posee la información que querés obtener. Aquí hay algunos consejos:
       </p>
       <ul>
-        <li>Browse or search <%= site_name %> looking for similar requests to yours.</li>
-        <li>When you've found an authority you think might have the information, use
-          the "home page" link on the right hand side of their page to check what they do
-          on their website.</li>
-        <li>Contact the authority by phone or email to ask if they hold the kind of
-          information you're after.</li>
-        <li>Don't worry excessively about getting the right authority. If you get it
-          wrong, they ought to advise you who to make the request to instead.
+        <li>Navegá por <%= site_name %> buscando solicitudes similares a las tuyas.</li>
+        <li>Cuando hayas encontrado una autoridad que creés que podría tener la información, entrá a ver la información tenemos sobre ella y usá el enlace a su web oficial para verificar lo que hacen.</li>
+        <li>Ponete en contacto con la autoridad por teléfono o correo electrónico para preguntar si tienen el tipo de información que buscás. 
         </li>
-        <li>If you've got a thorny case, please <a href="<%= help_contact_path %>">contact us</a> for help.</li>
+        <li>No te preocupes excesivamente por obtener la autoridad correcta. Si te equivocás, deberían derivar tu solicitud a la autoridad correcta. Y si te equivocaste de jurisdicción deberían informártelo.
+        </li>
+        <li>Si tenés un caso difícil, <a href="<%= help_contact_path %>">contactamos</a> para obtener ayuda.</li>
       </ul>
 
     </dd>
 
 
 
-    <dt id="missing_body">You're missing the public authority that I want to request from! <a href="#missing_body">#</a> </dt>
+    <dt id="missing_body">¡No está disponible en este sitio el organismo al que quiero pedir información! <a href="#missing_body">#</a> </dt>
 
     <dd>
-      <p>Please <a href="<%= new_change_request_path %>">contact us</a> with the name of the public authority and,
-        if you can find it, their contact email address for Freedom of Information requests.
-      </p>
-      <p>If you'd like to help add a whole category of public authority to the site, we'd love
-        to hear from you too.
+      <p>Ponete en contacto con nosotros. Indicanos  el nombre de la autoridad pública -o entidad privada- y, si lográs encontrarlo, su dirección de correo electrónico institucional para gestionar solicitudes de información.
       </p>
 
     </dd>
 
-    <dt id="authorities">Why do you include some authorities that aren't formally subject to FOI?<a href="#authorities">#</a> </dt>
+    <dt id="authorities">¿Por qué el sitio incluye autoridades que no están formalmente obligadas por leyes de acceso a la información?<a href="#authorities">#</a> </dt>
 
     <dd>
-      <p><%= site_name %> lets you make requests for information to a range of
-        organisations:</p>
+      <p><%= site_name %> permite realizar solicitudes de información a una variedad de organizaciones:</p>
 
       <ul>
-        <li> Those formally subject to the FOI Act</li>
-        <li> Those formally subject to the Environmental Regulations (a less well
-          defined group)</li>
-        <li> Those which voluntarily comply with the FOI Act</li>
-        <li> Those which aren't subject to the Act but we think should be, on grounds
-          such as them having significant public responsibilities.
+        <li> Aquellas formalmente sujetas a la Ley N° 27.275 de acceso a la información pública, o a las legislaciones provinciales y municipales correspondientes.
+        </li>
+        <li> Aquellas formalmente sujetas a las regulaciones ambientales.
+        </li>
+        <li> Las que cumplen voluntariamente con pedidos de acceso a la información.
+        </li>
+        <li> Aquellas que no están -o no es claro que estén- sujetas a la leyes de acceso a la información pero creemos que deberían estarlo.
         </li>
       </ul>
 
-      <p>In the last case, we're using the site to lobby for expansion of the
-        scope of the FOI Act. Even if an organisation is not legally obliged to respond
-        to an FOI request, they can still do so voluntarily.
+      <p>En el último caso, estamos usando el sitio para presionar para la expansión del alcance del derecho de acceso a la información pública. La falta de normas expresas no puede limitar el ejercicio de ese derecho humano. 
       </p>
 
     </dd>
 
-    <dt id="focused">Why must I keep my request focused?<a href="#focused">#</a> </dt>
+    <dt id="focused">¿Por qué debo delimitar lo máximo posible mi pedido de información?<a href="#focused">#</a> </dt>
 
     <dd>
 
@@ -101,190 +91,105 @@
 
     </dd>
 
-    <dt id="fees">Does it cost me anything to make a request?<a href="#fees">#</a> </dt>
+    <dt id="fees">¿Debo pagar para hacer una solicitud?<a href="#fees">#</a> </dt>
 
     <dd>
 
-      <p>Making an FOI request is nearly always free.</p>
+      <p>No, las solicitudes de información pública son siempre gratuitas.</p>
 
-      <p>Authorities often include unnecessary, scary, boilerplate in
-        acknowledgement messages saying they "may" charge a fee. Ignore such notices.
-        They hardly ever will actually charge a fee.  If they do, they can only charge you if
-        you have specifically agreed in advance to pay.  <a
-        href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/practical_application/chargingafee.pdf">More
-        details</a> from the Information Commissioner.
+      <p>Excepcionalmente, podrían pedirte anticipadamente el costo de la reproducción en papel. Sin embargo, sólo pueden hacerlo cuando no sea posible cumplir la entrega de copias en formato digital, sea porque no se encuentra en ese formato o porque su digitalización implica una carga desmedida para la administración.
       </p>
-
-      <p>Sometimes an authority will refuse your request, saying that the cost
-        of handling it exceeds £600 (for central government) or £450 (for all other
-        public authorities). At this point you can refine your
-        request. e.g. it would be much cheaper for an authority to tell you the amount
-        spent on marshmallows in the past year than in the past ten years.
-      </p>
-
     </dd>
 
 
 
-    <dt id="quickly_response">How quickly will I get a response? <a href="#quickly_response">#</a> </dt>
+    <dt id="quickly_response">¿Qué tan rápido recibiré una respuesta?<a href="#quickly_response">#</a> </dt>
 
     <dd>
-      <p>By law, public authorities must respond <strong>promptly</strong> to
-        requests.
+      <p>Por ley, las autoridades públicas deben responder las solicitudes con máxima premura.
       </p>
 
-      <p>Even if they are not prompt, in nearly all cases they must respond within
-        20 working days. If you had to clarify your request, or they are a school,
-        or one or two other cases, then they may have more time
+      <p>Incluso si no son rápidos, en casi todos los casos deben responder dentro de los 15 días hábiles. Si tuvo que aclarar su solicitud, o si el organismo pide una prórroga, la respuesta podría demorar un poco más de tiempo
         (<a href="<%= help_officers_path(:anchor => 'days') %>">full details</a>).
       </p>
-      <p><%= site_name %> will email you if you don't get a timely response.  You can
-        then send the public authority a message to remind them, and tell them if they
-        are breaking the law.</p>
+      <p><%= site_name %> te enviará un correo electrónico si no recibís una respuesta oportuna y te ayudará a exigirla.</p>
 
     </dd>
 
-    <dt id="no_response">What if I never get a response?<a href="#no_response">#</a> </dt>
+    <dt id="no_response">¿Qué pasa si nunca recibo respuesta?<a href="#no_response">#</a> </dt>
 
     <dd>
-      <p>There are several things you can do if you never get a response.</p>
+      <p>Hay algunas razones que explican por qué no recibiste respuesta.</p>
       <ul>
-        <li>Sometimes there has been a genuine problem and the authority never
-          received the request. It is worth telephoning the authority and politely
-          checking that they received the request. It was sent to them by email.
+        <li>Podría tratarse de un problema real. Quizás la autoridad nunca recibió la solicitud. Vale la pena comunicarse por teléfono y constatar que hayan recibido la solicitud que se les envió por correo electrónico.
         </li>
-        <li>If they have not received it, the problem is most likely due to
-          "spam filters". Refer the authority to the measures in the answer
-          '<a href="<%= help_officers_path(:anchor => 'spam_problems') %>">I can see a request on <%= site_name %>, but we never got it by email!</a>'
-          in the FOI officers section of this help.
+        <li>Si no lo han recibido, el problema probablemente se deba a los "filtros de spam". Puede invitarse a la autoridad a revisar 
+          '<a href="<%= help_officers_path(:anchor => 'spam_problems') %>">este portal de ayuda para responsables de acceso a la información. <%= site_name %>, but we never got it by email!</a>'
         </li>
-        <li>If you're still having no luck, then you can ask for an internal review,
-          and then complain to the Information Commissioner about the authority.
-          Read our page '<a href="<%= help_general_path(:template => 'unhappy') %>">Unhappy about the response you got?</a>'.
+        <li>Si aún no tenés suerte, podés reclamar al órgano garante de acceso a la información pública o recurrir a la vía judicial.
+        Revisá la sección '<a href="<%= help_general_path(:template => 'unhappy') %>">“Qué hacer ante incumplimientos de solicitudes de información”.</a>'.
       </ul>
     </dd>
 
-    <dt id="not_satifised">What if I'm not satisfied with the response? <a href="#not_satifised">#</a> </dt>
-    <dd>If you didn't get the information you asked for, or you didn't get it in time,
-      then read our page '<a href="<%= help_general_path(:template => 'unhappy') %>">Unhappy about the response you got?</a>'.
+    <dt id="not_satifised">Si no me respondieron o no me gusta la respuesta, ¿qué puedo hacer?<a href="#not_satifised">#</a> </dt>
+    <dd>Si no recibiste la información que pediste, si sólo te entregaron información de manera parcial o si la respuesta no te satisface, podés reclamar. Mirá nuestra sección'<a href="<%= help_general_path(:template => 'unhappy') %>">“Qué hacer ante incumplimientos de solicitudes de información”.</a>'.
     </dd>
 
-    <dt id="reuse">It says I can't re-use the information I got!<a href="#reuse">#</a> </dt>
+    <dt id="reuse">Me dieron información pero me exigieron que la mantenga en reserva<a href="#reuse">#</a> </dt>
     <dd>
-      <p>Authorities often add legal boilerplate about the
-        "<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of Public Sector
-          Information Regulations 2005</a>", which at first glance implies you may not
-        be able do anything with the information.
-      </p>
-
-      <p>You can, of course, write articles about the information or summarise it, or
-        quote parts of it. We also think you should feel free to republish the
-        information in full, just as we do, even though in theory you might not be
-        allowed to do so.  See <a href="<%= help_officers_path(:anchor => 'copyright') %>">our policy on copyright</a>.</p>
+      <p>La información debe ser entregada sin condicionamientos, para que la puedas reutilizar y difundir. Si tenés dudas ponete en <a href="<%= help_contact_path %>">contacto</a> con nosotros.</p>
 
     </dd>
 
-    <dt id="ico_help">Can you tell me more of the nitty gritty about the process of making requests? <a href="#ico_help">#</a> </dt>
+    <dt id="ico_help">Quiero saber más sobre los pedidos de acceso a la información pública <a href="#ico_help">#</a> </dt>
 
     <dd>
-      <p>Have a look at the
-        <a href="http://www.ico.gov.uk/for_the_public/access_to_official_information.aspx">access to official information</a>
-        pages on the Information Commissioner's website.</p>
+      <p>Los diferentes mecanismos de acceso a la información pública varían, aunque no en lo esencial, según la jurisdicción y tipo de organismo de que se trate. Por ejemplo, si vas a pedir información a un Ministerio del Poder Ejecutivo Nacional, podés revisar la <a href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/texact.htm">Ley Nº 27.275 de acceso a la información pública</a> ; si tu pedido está dirigido a un órgano de la Ciudad de Buenos Aires, dale un vistazo a la <a href="https://www.buenosaires.gob.ar/gobierno/ley-ndeg-104">Ley Nº 104</a>. Encontrá toda la legislación de cada jurisdicción en la sección de legislación.</p>
 
-      <p>If you're requesting information from a Scottish public authority,
-        the process is very similar. There are differences around time
-        limits for compliance.
-        See the <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
-          Information Commissioner's guidance</a> for details.</p>
+      <p>También te invitamos a que visites los sitios web de los órganos garantes de cada jurisdicción. Por ejemplo, a nivel nacional, el <a href="https://www.argentina.gob.ar/aaip">sitio de la Agencia de Acceso a la Información Pública.</a></p>
     </dd>
 
-    <dt id="data_protection">Can I request information about myself? <a href="#data_protection">#</a> </dt>
+    <dt id="data_protection">¿Puedo pedir información sobre mi? <a href="#data_protection">#</a> </dt>
 
     <dd>
-      <p>No. Requests made using <%= site_name %> are public, made under the Freedom of
-        Information Act, and cannot help you find information about a private
-        individual.</p>
+      <p>No. Las solicitudes hechas a través de <%= site_name %> son públicas, hechas bajo las leyes de acceso a la información, y no pueden ayudarte a encontrar información propia o sobre un particular (salvo que sea un funcionario).</p>
 
-      <p>If you would like to know what information a public
-        authority holds about yourself, you should make a "Subject Access Request" in
-        private using Data Protection law.  The leaflet "<a
-        href="http://www.ico.gov.uk/upload/documents/library/data_protection/introductory/subject_access_rights.pdf">How to access your information</a>" (on the Information Commissioner's
-        website) explains how to do this.</p>
+      <p>Si querés conocer qué datos personales tuyos tiene una entidad pública o privada, debés utilizar la <a href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/60000-64999/64790/texact.htm">Ley de Protección de Datos Personales</a>. Te recomendamos también acudir al  <a href="https://www.argentina.gob.ar/aaip/datospersonales">órgano garante de protección</a> correspondiente.</p>
 
-      <p>If you see that somebody has included personal information, perhaps
-        unwittingly, in a request, please <a href="<%= help_contact_path %>">contact us</a>
-        immediately so we can remove it.</p>
+      <p>Si ves que alguien incluyó datos personales, tal vez involuntariamente, en una solicitud, <a href="<%= help_contact_path %>">contactanos</a> de inmediato para que podamos eliminarla.</p>
     </dd>
 
 
-    <dt id="private_requests">I'd like to keep my request secret! (At least until I publish my story) <a href="#private_requests">#</a> </dt>
+    <dt id="private_requests">¡Me gustaría mantener mi solicitud en secreto! (quiero utilizarla primero) <a href="#private_requests">#</a> </dt>
 
-    <dd><p><%= site_name %> is currently only designed for public requests. All
-        responses that we receive are automatically published on the website for anyone
-        to read.  </p>
-      <p>You should contact the public authority directly if you would like to
-        make a request in private.  If you're interested in buying a system which helps
-        you manage FOI requests in secret, then <a href="<%= help_contact_path %>">contact us</a>.
-      </p>
+    <dd><p><%= site_name %> actualmente solo está diseñado para solicitudes públicas. Todas las respuestas que recibimos se publican automáticamente en el sitio web para que cualquiera las lea, las reutilice y difunda la información.</p>
     </dd>
 
-    <dt id="eir">Why can I only request information about the environment from some authorities? <a href="#eir">#</a> </dt>
+    <dt id="multiple">¿Puedo hacer un mismo pedido a varias autoridades? <a href="#multiple">#</a> </dt>
 
-    <dd>
-      <p>Some public authorities, such as <a href="https://www.whatdotheyknow.com/body/south_east_water">South East Water</a>,
-        don't come under the Freedom of Information Act, but do come under another law called
-        the Environmental Information Regulations (EIR).
-      </p>
-
-      <p>It's a very similar law, so you make a request
-        to them using <%= site_name %> in just the same way as an FOI request. The only
-        difference is that on the page where you write your request, it reminds you
-        that you can only request "environmental information" and tells you what that
-        means. It is quite broad.
-      </p>
-
-      <p>You can, of course, request environmental information from other
-        authorities. Just make a Freedom of Information (FOI) request as normal. The
-        authority has a duty to work out if the Environmental Information Regulations
-        (EIR) is the more appropriate legislation to reply under.
-      </p>
-    </dd>
-
-    <dt id="multiple">Can I make the same to request to lots of authorities, e.g. all councils? <a href="#multiple">#</a> </dt>
-
-    <dd>We ask you to first send a test version of your request to a few
-      authorities. Their responses will help you improve the wording of your request,
-      so that you get the best information when you send the request to all of
-      the authorities. There is currently no automated system for sending the request
-      to the other authorities, you must copy and paste it by hand.
+    <dd>Te aconsejamos que primero envíes una versión de prueba de tu solicitud a algunas autoridades. Sus respuestas te ayudarán a mejorar la redacción de la solicitud, de modo que obtendrás información más completa y precisa cuando formules el pedido a todas las autoridades. Actualmente no existe un sistema automatizado para enviar la solicitud a varias autoridades a la vez, deberás hacerlo manualmente.
 
     </dd>
 
-    <dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a> </dt>
+    <dt id="offsite">Hice una solicitud fuera de <%= site_name %>, ¿cómo la subo al portal?<a href="#offsite">#</a> </dt>
 
-    <dd><%= site_name %> is an archive of requests made through the site,
-      and does not try to be an archive of all FOI requests. We'll never support uploading
-      other requests. For one thing, we wouldn't be able to verify that other
-      responses actually came from the authority. If this really matters to you,
-      you can always make the same request again via <%= site_name %>.
+    <dd><%= site_name %> contiene un repositorio de solicitudes realizadas a través del sitio y no intenta ser un archivo de todas las solicitudes de acceso a la información. No admitimos cargar otras solicitudes al repositorio pues no podríamos verificar que las respuestas realmente fueron dadas por las autoridades. De todos modos, es posible volver a formular la misma solicitud de información a través de <dd><%= site_name %> para que quede registrada en el repositorio.
     </dd>
 
     <% if AlaveteliConfiguration::enable_annotations %>
-      <dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+      <dt id="moderation">¿Cómo controlan los pedidos que se hacen a través de <%= site_name %>? <a href="#moderation">#</a> </dt>
 
       <dd>
-        <p>Annotations on <%= site_name %> are to help
-          people get the information they want, or to give them pointers to places they
-          can go to help them act on it. We reserve the right to remove anything else.
+        <p>Los usuarios pueden formular los pedidos que crean convenientes, de la manera que quieran hacerlo, pues no juzgamos la conveniencia de las solicitudes ni la forma en que son formuladas.
         </p>
-        <p>Endless, political discussions are not allowed.
-          Post a link to a suitable forum or campaign site elsewhere.</p>
+        <p>Aunque damos consejos útiles para efectuar solicitudes y ayudar a las personas a obtener la información que desean. Nos reservamos el derecho de eliminar cualquier solicitud que no tenga ese propósito, que contenga insultos o que revele inadecuadamente datos personales.
+        </p>
       </dd>
     <% end %>
 
   </dl>
 
-  <p><strong>Next</strong>, read about <a href="<%= help_privacy_path %>">your privacy</a> --&gt;
+  <p><strong>Podés seguir leyendo</strong>, sobre <a href="<%= help_privacy_path %>">tu privacidad</a> --&gt;
 
     <div id="hash_link_padding"></div>
 </div>
