@@ -892,7 +892,7 @@ dt {
   position: relative;
   @include respond-min($main_menu-mobile_menu_cutoff) {
     padding: 5em 0 8em;
-    background-image: image-url('homepage-background.jpg');
+    background-image: image-url('homepage-background2.jpg');
   }
 
   a {
