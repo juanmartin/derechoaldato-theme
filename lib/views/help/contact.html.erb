@@ -40,7 +40,7 @@
     <p>
       <label class="form_label" for="contact_name">Su nombre:</label>
       <%= f.text_field :name, :size => 20 %>
-      (or <%= link_to "sign in", signin_path(:r => request.fullpath) %>)
+      (o <%= link_to "inicia sesión", signin_path(:r => request.fullpath) %>)
     </p>
 
     <p>
@@ -86,7 +86,7 @@
 
   <div class="form_button">
     <%= hidden_field_tag(:submitted_contact_form, 1) %>
-    <%= submit_tag "Send message to the charity", :data => { :disable_with => "Sending..." } %>
+    <%= submit_tag "Enviar", :data => { :disable_with => "Sending..." } %>
     &lt;-- Nosotros diseñamos este sitio, no el Gobierno!
   </div>
 
