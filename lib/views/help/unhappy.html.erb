@@ -1,22 +1,25 @@
-<% @title = "Unhappy about a Freedom of Information request?" %>
+<% @title = "Respuestas insatisfactorias" %>
 
 <%= render :partial => 'sidebar' %>
 
 <% if @info_request %>
-<div id="left_column_flip" class="left_column_flip">
-  <h1>Unhappy about the response you got
-    to your request '<%=request_link(@info_request) %>'?
+
+  <h1>Respuestas insatisfactorias '<%=request_link(@info_request) %>'?
   </h1>
 <% else %>
-  <h1>Unhappy about the response you got?</h1>
+  <h1>¡No respondieron mi solicitud!</h1>
 <% end %>
 
-<p>If ...</p>
+<p>Cada vez son más los organismos que se ajustan a la ley de acceso a la información pública, pero aún persisten algunos que no lo hacen. Si no respondieron tu pedido de información podés reclamar para que lo hagan (seleccioná la opción para reclamar en la barra de acciones de la solicitud).</p>
+
+<p>También hay otras razones que podrían explicar la falta de respuesta:</p>
 
 <ul>
-  <li>You didn't get a reply within 20 working days</li>
-  <li>You did not get all of the information that you requested <strong>or</strong></li>
-  <li>Your request was refused, but without a reason valid under the law</li>
+  <li>Quizás no se cumplió aún el plazo de 15 días hábiles (no corridos).</li>
+  <li>También podría ser que te hayan notificado de una prórroga por otros 15 días hábiles.<strong>or</strong></li>
+  <li>Quizás el pedido llegó más tarde al organismo porque fue derivado por otro. En ese caso el plazo empieza a correr desde que fue recibido por el organismo que debe contestar el pedido.</li>
+  <li>Podría tratarse de un problema real. Quizás la autoridad nunca recibió la solicitud. Vale la pena comunicarse por teléfono y constatar que hayan recibido la solicitud que se les envió por correo electrónico.</li>
+  <li>Si no lo han recibido, el problema probablemente se deba a los "filtros de spam". Podés invitar a la autoridad a revisar <a href="http://alaveteli.org/"> este portal de ayuda para RAIPs</a>.</li>
 </ul>
 
 <p>... you can</p>
