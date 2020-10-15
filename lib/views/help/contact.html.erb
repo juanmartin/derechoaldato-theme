@@ -68,14 +68,14 @@
     <p>
       <label class="form_label" for="contact_message">Incluir link de solicitud:</label>
       <%=request_link(@last_request) %>
-      <%= submit_tag "remove", :name => 'remove' %>
+      <%= submit_tag "quitar", :name => 'remove' %>
     </p>
   <% end %>
   <% if !@last_body.nil? %>
     <p>
       <label class="form_label" for="contact_message">Incluir link de organismo:</label>
       <%=public_body_link(@last_body) %>
-      <%= submit_tag "remove", :name => 'remove' %>
+      <%= submit_tag "quitar", :name => 'remove' %>
     </p>
   <% end %>
 
