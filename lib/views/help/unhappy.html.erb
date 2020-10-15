@@ -1,9 +1,8 @@
 <% @title = "Unhappy about a Freedom of Information request?" %>
 
 <%= render :partial => 'sidebar' %>
-
-<% if @info_request %>
 <div id="left_column_flip" class="left_column_flip">
+<% if @info_request %>
   <h1>Unhappy about the response you got
     to your request '<%=request_link(@info_request) %>'?
   </h1>
