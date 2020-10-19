@@ -1,115 +1,21 @@
-<% @title = "Respuestas insatisfactorias" %>
+<% @title = "Making requests" %>
+<% if @info_request %>
 
 <%= render :partial => 'sidebar' %>
 
-<% if @info_request %>
-
-  <h1>Respuestas insatisfactorias '<%=request_link(@info_request) %>'?
-  </h1>
-<% else %>
-  <h1>¡No respondieron mi solicitud!</h1>
-<% end %>
-
-<p>Cada vez son más los organismos que se ajustan a la ley de acceso a la información pública, pero aún persisten algunos que no lo hacen. Si no respondieron tu pedido de información podés reclamar para que lo hagan (seleccioná la opción para reclamar en la barra de acciones de la solicitud).</p>
-
-
-<p>También hay otras razones que podrían explicar la falta de respuesta:</p>
-
-<ul>
-  <li>Quizás no se cumplió aún el plazo de 15 días hábiles (no corridos).</li>
-  <li>También podría ser que te hayan notificado de una prórroga por otros 15 días hábiles.</li>
-  <li>Quizás el pedido llegó más tarde al organismo porque fue derivado por otro. En ese caso el plazo empieza a correr desde que fue recibido por el organismo que debe contestar el pedido.</li>
-  <li>Podría tratarse de un problema real. Quizás la autoridad nunca recibió la solicitud. Vale la pena comunicarse por teléfono y constatar que hayan recibido la solicitud que se les envió por correo electrónico.</li>
-  <li>Si no lo han recibido, el problema probablemente se deba a los "filtros de spam". Podés invitar a la autoridad a revisar <a href="<%= help_officers_path %>"> este portal de ayuda para RAIPs</a>.</li>
-</ul>
-
-
-<h1 id="internal_review">1. Asking for an internal review <a class="hover_a" href="#internal_review">#</a> </h1>
-
-<p>
-  <% if @info_request %>
-    <%= link_to "Request an internal review", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
+<div id="left_column_flip" class="left_column_flip">
+  <% if params[:country_name] %>
+    <h1><%= _("Would you like to see a website like this in your country?") %></h1>
   <% else %>
-    At the bottom of the relevant request page on <%= site_name %> choose
-    "request an internal review". Then write a message asking for an internal
-    review of your request. You may want to include a link to the
-    request page, to make it clear which request you are talking about.
+    <h1>Acerca del software</h1>
   <% end %>
-</p>
+  <p>Este sitio web funciona gracias a la adaptación efectuada por la Fundación Transparencia Activa del software Alaveteli. Alaveteli es un software libre para formular solicitudes de acceso a la información pública.</p>
+  <p>Alaveteli fue desarrollado inicialmente por mySociety y ha sido mejorado para un uso internacional por varias organizaciones, incluyendo a Access Info Europe, FLOSS Kosova y Zasto Ne en Bosnia.</p>
+  <p>El desarrollo de Alaveteli fue patrocinado por diferentes fundaciones y organizaciones benéficas interesadas en la transparencia en el mundo entero.
+  </p>
 
-<p>Internal reviews should be quick. If one takes longer than 20 working days
-  then the authority should write and let you know, and it should never take
-  longer than 40 working days (see this
-  <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/foi_good_practice_guidance_5.pdf">good
-    practice guide</a>).
-  You will then either get the information that
-  you originally requested, or you will be told that the review upholds the
-  original decision.
-</p>
 
-<h1 id="complaining">2. Complaining to the Information Commissioner <a class="hover_a" href="#complaining">#</a> </h1>
 
-<p>If you are still unhappy after the public authority has done their internal review,
-  then you can complain to the Information Commissioner. To do this read
-  <a href="http://www.ico.gov.uk/complaints/freedom_of_information.aspx">Complaints about Freedom of Information</a>
-  on the Information Commissioner's website. If you requested information from a Scottish
-  authority, then  <a href="http://www.itspublicknowledge.info/YourRights/HowToAppeal/Appeal.asp">appeal
-    to the Scottish Information Commissioner</a>.
-</p>
+  <div id="hash_link_padding"></div>
+</div>
 
-<p>To make it easier to send the relevant information to the
-  Information Commissioner, either
-  <% if @info_request %>
-    include a link to your request
-    <strong><%=h request_url(@info_request) %></strong>
-  <% else %>
-    include a link to your request on <%= site_name %>
-<% end %>
-in your complaint or print out the whole page of your request and all attachments.
-</p>
-
-<p><%= site_name %> has no special facilities for handling a request at this stage - it
-  passes into the Information Commissioner's system. You can leave annotations on your
-  request keeping people informed of progress.</p>
-
-<p>A warning. There is a backlog of work at the Information Commissioner, and
-  it can take literally years to get resolution from them. If you reach this point,
-  you should accept that you won't get the information quickly by this means. Maybe
-  you want to help the fight to improve Freedom of Information, or maybe
-  getting the information slowly is still worthwhile. You can also try and
-  get the information by <strong>other means...</strong></p>
-
-<h1 id="other_means">3. Using other means to answer your question <a class="hover_a" href="#other_means">#</a> </h1>
-
-<p>You can try persuing your problem or your research in other ways.</p>
-
-<ul>
-  <li>Make a <strong>new FOI request</strong> for summary information, or for
-    documentation relating indirectly to matters in your refused request.
-    <a href="<%= help_contact_path %>">Ask us for ideas</a> if you're stuck.</li>
-  <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
-    then make FOI requests to them.</li>
-  <li>Write to <strong>your MP</strong> or other politician using <a
-       href="http://www.writetothem.com">WriteToThem</a> and ask for their help
-     finding the answer. MPs can write directly to ministers or departments, and
-     can ask written questions in the House of Commons. Councillors in local authorities
-     can talk directly to council officers.</li>
-  <% if can_ask_the_eu?(@country_code) %>
-    <li>
-      Try <%= link_to 'asking for the information from the European Union',
-      'http://www.asktheeu.org' %>. Every one of the 500 million people
-      living in the European Union (both citizens and residents) has the
-      legally guaranteed right to ask for information from EU authorities.
-      <%= link_to 'Ask The EU', 'http://www.asktheeu.org' %> is a version of
-      this website for the European Union.
-    </li>
-  <% end %>
-  <li>Ask <strong>other researchers</strong> who are interested in a similar
-    issue to yours for ideas. You can sometimes find them by browsing this site;
-    contact any registered user from their page. There may be an Internet
-    forum or group that they hang out in. If it is a local matter, use <a
-       href="http://www.groupsnearyou.com">GroupsNearYou</a> to find such a
-     forum.</li>
-  <li>You could form a small local campaign group and arrange a meeting
-    with staff from the authority.</li>
-</ul>
