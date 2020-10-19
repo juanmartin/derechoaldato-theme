@@ -68,10 +68,6 @@
       <p>Podés seguir leyendo sobre <a href="<%= help_requesting_path %>">cómo hacer solicitudes</a></p>
     </dd>
 
-    <dt id="who">¿Quién hace <%= site_name %> ? <a href="#who">#</a> </dt>
-    <dd><%= site_name %> La plataforma se ejecuta con <a href="http://alaveteli.org">Alaveteli</a>, que fue creado y administrado por <a href="http://www.mysociety.org">mySociety</a>, una organización benéfica registrada, y fue inicialmente financiado por el <a href="http://www.mysociety.org/2006/12/06/funding-for-freedom-of-information/">JRSST Charitable Trust</a>.
-      Si te gusta lo que estamos haciendo, entonces puedes hacer una donación.</a>.
-    </dd>
 
     <dt id="updates">¿Cómo puedo seguir las noticias sobre <%= site_name %>?<a href="#updates">#</a> </dt>
     <dd>Tenemos un <a href="<%= blog_path %>">blog</a><% if !MySociety::Config.get('TWITTER_USERNAME', '').empty? %> and a <a href=https://twitter.com/<%= MySociety::Config.get('TWITTER_USERNAME', '') %>>twitter feed</a><% end %>.

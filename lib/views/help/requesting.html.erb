@@ -1,11 +1,11 @@
-<% @title = "Solicitar información" %>
+<% @title = "Solicitudes de información" %>
 
 <%= render :partial => 'sidebar' %>
 <div id="left_column_flip" class="left_column_flip">
   <h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a></h1>
   <dl>
 
-    <dt id="which_authority">No sé a qué autoridad debería presentar mi solicitud, ¿cómo puedo averiguarlo? <a href="#which_authority">#</a> </dt>
+    <dt id="which_authority">No sé a quién debería presentar mi solicitud, ¿cómo puedo averiguarlo?<a href="#which_authority">#</a> </dt>
 
     <dd>
       <p>Puede ser difícil desenredar la complicada estructura del Estado y determinar quién posee la información que querés obtener. Aquí hay algunos consejos:
@@ -13,6 +13,7 @@
       <ul>
         <li>Navegá por <%= site_name %> buscando solicitudes similares a las tuyas.</li>
         <li>Cuando hayas encontrado una autoridad que creés que podría tener la información, entrá a ver la información tenemos sobre ella y usá el enlace a su web oficial para verificar lo que hacen.</li>
+        <li>Fijate en Derecho al Dato el <a href="https://derechoaldato.com.ar/es_AR/body/list/all">listado de entidades</a>. Allí verás una descripción e información adicional sobre el ámbito de su competencia que te pueden ayudar.</li>
         <li>Ponete en contacto con la autoridad por teléfono o correo electrónico para preguntar si tienen el tipo de información que buscás. 
         </li>
         <li>No te preocupes excesivamente por obtener la autoridad correcta. Si te equivocás, deberían derivar tu solicitud a la autoridad correcta. Y si te equivocaste de jurisdicción deberían informártelo.
@@ -24,10 +25,10 @@
 
 
 
-    <dt id="missing_body">¡No está disponible en este sitio el organismo al que quiero pedir información! <a href="#missing_body">#</a> </dt>
+    <dt id="missing_body">¡No está disponible en este sitio el organismo al que quiero pedir información!<a href="#missing_body">#</a> </dt>
 
     <dd>
-      <p>Ponete en contacto con nosotros. Indicanos  el nombre de la autoridad pública -o entidad privada- y, si lográs encontrarlo, su dirección de correo electrónico institucional para gestionar solicitudes de información.
+      <p>Ponete en contacto con nosotros. Indicanos  el nombre de la autoridad pública -o entidad privada- y, si la tenés o lográs entrarla, su dirección de correo electrónico institucional para gestionar solicitudes de información.
       </p>
 
     </dd>
@@ -35,24 +36,36 @@
     <dt id="authorities">¿Por qué el sitio incluye autoridades que no están formalmente obligadas por leyes de acceso a la información?<a href="#authorities">#</a> </dt>
 
     <dd>
-      <p><%= site_name %> permite realizar solicitudes de información a una variedad de organizaciones:</p>
+      <p>Por el momento, Derecho al Dato permite realizar solicitudes de información a una variedad de entidades:</p>
 
       <ul>
-        <li> Aquellas formalmente sujetas a la Ley N° 27.275 de acceso a la información pública, o a las legislaciones provinciales y municipales correspondientes.
+        <li>Aquellas formalmente sujetas a la Ley N° 27.275 de acceso a la información pública.
         </li>
-        <li> Aquellas formalmente sujetas a las regulaciones ambientales.
-        </li>
-        <li> Las que cumplen voluntariamente con pedidos de acceso a la información.
-        </li>
-        <li> Aquellas que no están -o no es claro que estén- sujetas a la leyes de acceso a la información pero creemos que deberían estarlo.
-        </li>
+        <li>Las que cumplen voluntariamente con pedidos de acceso a la información.</li>
+        <li>Aquellas que no están -o no es claro que estén- sujetas a la leyes de acceso a la información pero creemos que deberían estarlo.</li>
+        <li>En el último caso, estamos usando el sitio para expandir los alcances del derecho de acceso a la información pública. La falta de normas expresas no puede limitar el ejercicio de ese derecho humano.</li>
       </ul>
+      </dd>
 
-      <p>En el último caso, estamos usando el sitio para presionar para la expansión del alcance del derecho de acceso a la información pública. La falta de normas expresas no puede limitar el ejercicio de ese derecho humano. 
-      </p>
+      <dt id="queseentiende">¿Qué se entiende por información pública?<a href="#queseentiende">#</a> </dt>
+      <dd><p>Es todo tipo de información de relevancia para la sociedad, es decir, que refiere a asuntos públicos y por esa razón nos interesa a todas/os. Puede tratarse de información actual o de cualquier época, relacionada con:</p>
+      <ul>
+      <li>La actuación del Estado o de sus funcionarios. Por ejemplo sueldos, trabajos cumplidos, sus actos, la gestión de un ministerio, los resultados obtenidos, etc.</li>
+      <li>La gestión de recursos, bienes o servicios públicos. Así, por ejemplo, la ejecución presupuestaria de un proyecto determinado, la inversión en servicios públicos, etc.
+      </li>
+      <li>El ejercicio de derechos. Podés pedir información sobre salud pública, educación, sobre el diseño y ejecución de políticas públicas, etc.</li>
+      <li>Cualquier otra información de interés para la comunidad. Lo que se te ocurra, lo que te sirva y esté relacionado con fines comunes de la sociedad. </li>
+      </ul>
+      <p>¡Navegá por el sitio y vas a encontrar buenos ejemplos!</p></dd>
 
-    </dd>
+      
 
+      <dt id="cuanto">¿Puedo acceder a toda la información pública?<a href="#cuanto">#</a> </dt>
+
+      <dd><p>La regla general es que cualquier persona puede tener acceso a toda la información contenida en documentos -de cualquier tipo- que detenta el Estado u otro organismo o empresa obligada a informar. Sólo excepcionalmente se puede restringir ese derecho cuando se verifique alguno de los supuestos previstos por ley para proteger el interés común.</p> 
+      <p>Las excepciones están señaladas por la <a href='http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm'>Ley Nº 27.275 en su artículo 8º</a>. Debés tener en cuenta que por lo general los organismos no interpretan de la mejor manera esas excepciones. Revisá la sección sobre Respuestas insatisfactorias.</p>
+      
+     
     <dt id="focused">¿Por qué debo delimitar lo máximo posible mi pedido de información?<a href="#focused">#</a> </dt>
 
     <dd>
