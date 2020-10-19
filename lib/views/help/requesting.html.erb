@@ -66,43 +66,30 @@
       <p>Las excepciones están señaladas por la <a href='http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/norma.htm'>Ley Nº 27.275 en su artículo 8º</a>. Debés tener en cuenta que por lo general los organismos no interpretan de la mejor manera esas excepciones. Revisá la sección sobre Respuestas insatisfactorias.</p>
       
      
-    <dt id="focused">¿Por qué debo delimitar lo máximo posible mi pedido de información?<a href="#focused">#</a> </dt>
+    <dt id="focused"><p>¿Qué tipo de información puedo pedir?</p>
+    <p>¿En qué formato me lo van a dar?</p><a href="#focused">#</a> </dt>
 
     <dd>
 
       <p>
-        jkhbgfdskjhgsdfakjhgsdfaklhjsdfaklhjuPlease put in your request only what is needed so that someone can
-        easily identify what information you are asking for. Please do
-        <i>not</i> include any of the following:
-      </p>
+      Podés pedir cualquier tipo de información, dato o documento que esté en poder de los sujetos obligados (o que deban producir). Por ejemplo, podés solicitar documentos de archivo, bases de datos, códigos fuente, registros, informes, expedientes, notas o lo que sea.</p>
+      <p>Si no te basta con la explicación que te dieron no dudes en pedir los documentos respaldatorios. Es posible que no quieran darte información en formatos reutilizables… sin embargo, es su deber brindar información en datos abiertos ¡Exigilo!
+      
+      </p></dd>
 
-      <ul>
-        <li>arguments about your cause</li>
-        <li>statements that could defame or insult others</li>
-      </ul>
+      <dt id="negativo">No quiero explicar los motivos de mi solicitud.<a href="#negativo">#</a> </dt>
+      <dd>No tenés que hacerlo. No estás obligado a explicar nada a nadie. Las leyes protegen la libertad de acceder a información sin necesidad de dar razones ni de expresar para qué fines la vas a utilizar ¡No te pueden exigir explicaciones!</dd>
 
-      <p>
-        If you do, we may have to remove your request to avoid problems with
-        libel law, which is a pain for both you and us. Short, succinct messages
-        make it easier for authorities to be clear what information you are
-        requesting, which means you will get a reply more quickly.
-      </p>
+  <dt id="porque">¿Por qué debo ser conciso al pedir información?<a href="#porque">#</a> </dt>  
+  <dd><p>En tu pedido no incluyas:</p> 
+  <ul>
+  <li>tus preocupaciones ni tus posturas sobre un tema.</li>
+  <li>insultos o difamaciones a terceros</li>
+  </ul>
+  <p>Si lo hacés, es posible que tengamos que eliminar tu solicitud. </p>
+  <p>Introducí en tu solicitud sólo lo que necesitás saber, de manera breve y concisa. Así vas a permitir que se identifique fácilmente la información que estás buscando y seguramente vas a obtener una respuesta más rápido.</p>
+  <p>Si tenés varias preguntas para hacer es conveniente que hagas varios pedidos de información. Aunque el tema sea el mismo, ello permitirá obtener respuestas parciales más rápidamente.</p>
 
-      <p>
-        If you want information to support an argument or campaign, Freedom of
-        Information is a powerful tool. Although you may not use this site to
-        run your campaign, we encourage you to use it to get the information you
-        need. We also encourage to run your campaign elsewhere - one effective
-        and very easy way is to <%= link_to 'start your own blog',
-          "http://wordpress.com/"%>.
-        <% if AlaveteliConfiguration::enable_annotations %>
-          You are welcome to link to your campaign from this site in an
-          annotation to your request (you can make annotations after submitting
-          the request).
-        <% end %>
-      </p>
-
-    </dd>
 
     <dt id="fees">¿Debo pagar para hacer una solicitud?<a href="#fees">#</a> </dt>
 
@@ -119,13 +106,11 @@
     <dt id="quickly_response">¿Qué tan rápido recibiré una respuesta?<a href="#quickly_response">#</a> </dt>
 
     <dd>
-      <p>Por ley, las autoridades públicas deben responder las solicitudes con máxima premura.
-      </p>
+      <p>Por ley, las autoridades públicas deben responder las solicitudes con máxima premura.</p>
 
-      <p>Incluso si no son rápidos, en casi todos los casos deben responder dentro de los 15 días hábiles. Si tuvo que aclarar su solicitud, o si el organismo pide una prórroga, la respuesta podría demorar un poco más de tiempo
-        (<a href="<%= help_officers_path(:anchor => 'days') %>">detalles</a>).
+      <p>Incluso si no son rápidos, en todos los casos deben responder dentro de los 15 días hábiles. Si tuviste que aclarar tu solicitud, o si el organismo te notifica de una prórroga, la respuesta podría demorar otros 15 días hábiles más.
       </p>
-      <p><%= site_name %> te enviará un correo electrónico si no recibís una respuesta oportuna y te ayudará a exigirla.</p>
+      <p>Derecho al Dato te enviará un correo electrónico si no recibís una respuesta oportuna y te ayudará a exigirla.</p>
 
     </dd>
 
@@ -145,12 +130,13 @@
     </dd>
 
     <dt id="not_satifised">Si no me respondieron o no me gusta la respuesta, ¿qué puedo hacer?<a href="#not_satifised">#</a> </dt>
-    <dd>Si no recibiste la información que pediste, si sólo te entregaron información de manera parcial o si la respuesta no te satisface, podés reclamar. Mirá nuestra sección'<a href="<%= help_general_path(:template => 'unhappy') %>">“Qué hacer ante incumplimientos de solicitudes de información”.</a>'.
+    <dd>Si no recibiste la información que pediste, si sólo te entregaron información de manera parcial o si la respuesta no te satisface, podés reclamar. Mirá nuestra sección'<a href="<%= help_general_path(:template => 'unhappy') %>">“respuestas insatisfactorias”.</a>'.
     </dd>
 
-    <dt id="reuse">Me dieron información pero me exigieron que la mantenga en reserva<a href="#reuse">#</a> </dt>
+    <dt id="reuse">Quiero saber más sobre los pedidos de acceso a la información pública<a href="#reuse">#</a> </dt>
     <dd>
-      <p>La información debe ser entregada sin condicionamientos, para que la puedas reutilizar y difundir. Si tenés dudas ponete en <a href="<%= help_contact_path %>">contacto</a> con nosotros.</p>
+      <p>Los diferentes mecanismos de acceso a la información pública varían, aunque no en lo esencial, según la jurisdicción y tipo de organismo de que se trate. Por ejemplo, si vas a pedir información a un Ministerio del Poder Ejecutivo Nacional, podés revisar la <a href="http://servicios.infoleg.gob.ar/infolegInternet/anexos/265000-269999/265949/texact.htm">Ley Nº 27.275 de acceso a la información pública.</a></p>
+      <p>También te invitamos a que visites los sitios web de los órganos garantes de cada jurisdicción. Por ejemplo, el <a href="https://www.argentina.gob.ar/aaip">sitio de la Agencia de Acceso a la Información Pública</a> que es el órgano garante a nivel nacional.</p>
 
     </dd>
 
