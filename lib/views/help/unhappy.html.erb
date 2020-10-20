@@ -24,92 +24,49 @@
 </ul>
 
 
-<h1 id="internal_review">1. Asking for an internal review <a class="hover_a" href="#internal_review">#</a> </h1>
+<h1 id="mas_tiempo">Me dijeron que se tomarían más tiempo para responder, ¿pueden hacerlo?<a class="hover_a" href="#mas_tiempo">#</a> </h1>
 
 <p>
-  <% if @info_request %>
-    <%= link_to "Request an internal review", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
-  <% else %>
-    At the bottom of the relevant request page on <%= site_name %> choose
-    "request an internal review". Then write a message asking for an internal
-    review of your request. You may want to include a link to the
-    request page, to make it clear which request you are talking about.
-  <% end %>
+Las solicitudes de información tienen que ser respondidas en el plazo legal y sólo excepcionalmente, cuando existan verdaderas razones que lo justifiquen, los organismos pueden extender el plazo para responder.  Ese nuevo plazo de prórroga varía según la legislación pero nunca excede los 15 días hábiles.
+</p>
+<p>
+Para hacer uso de la prórroga es necesario que el organismo notifique al solicitante la ampliación de plazos, dando las razones pertinentes, antes del vencimiento del plazo original para responder la solicitud.</p>
+<p>
+Si te pidieron prórroga, te pedimos que marques tu solicitud como no resuelta.
+
 </p>
 
-<p>Internal reviews should be quick. If one takes longer than 20 working days
-  then the authority should write and let you know, and it should never take
-  longer than 40 working days (see this
-  <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/foi_good_practice_guidance_5.pdf">good
-    practice guide</a>).
-  You will then either get the information that
-  you originally requested, or you will be told that the review upholds the
-  original decision.
+<h1 id="dire_casa">¡Me pidieron la dirección de mi casa!<a class="hover_a" href="dire_casa">#</a> </h1>
+
+<p>
+Si una autoridad o entidad a la que pediste información te solicitó que indiques tu dirección física, no estás obligado a brindarla. La dirección de correo electrónico que provee Derecho al Dato es suficiente.
 </p>
 
-<h1 id="complaining">2. Complaining to the Information Commissioner <a class="hover_a" href="#complaining">#</a> </h1>
+<h1 id="no_postal">No, no, ¡necesitan una dirección postal para enviar una respuesta en papel!<a class="hover_a" href="#no_postal">#</a> </h1>
 
-<p>If you are still unhappy after the public authority has done their internal review,
-  then you can complain to the Information Commissioner. To do this read
-  <a href="http://www.ico.gov.uk/complaints/freedom_of_information.aspx">Complaints about Freedom of Information</a>
-  on the Information Commissioner's website. If you requested information from a Scottish
-  authority, then  <a href="http://www.itspublicknowledge.info/YourRights/HowToAppeal/Appeal.asp">appeal
-    to the Scottish Information Commissioner</a>.
+<p>
+En principio, la respuesta a tu solicitud tiene que brindarse por medios digitales. La plataforma de Derecho al Dato debería ser suficiente. Solo excepcionalmente tu pedido podría ser respondido en papel, si la información no consta en formato digital y siempre y cuando la digitalización de los documentos constituya una carga desmedida para la Administración. En tal caso sería aceptable que te requieran una dirección postal.
+</p> 
+<p>
+Si deseás proporcionar tu dirección postal de forma privada para recibir los documentos, marcá tu solicitud como "van a responder por correo", y te daremos una dirección de correo electrónico para usar con ese fin.
+</p>
+<p>
+También tené en cuenta que si no te brindan respuesta en formato digital pero deberían hacerlo, podés reclamar para que te envíen la información por vía electrónica (ver <a href="https://derechoaldato.com.ar/es_AR/help/unhappy">sección respuestas insatisfactorias)</a>.
 </p>
 
-<p>To make it easier to send the relevant information to the
-  Information Commissioner, either
-  <% if @info_request %>
-    include a link to your request
-    <strong><%=h request_url(@info_request) %></strong>
-  <% else %>
-    include a link to your request on <%= site_name %>
-<% end %>
-in your complaint or print out the whole page of your request and all attachments.
+<h1 id="ir_a_buscar">Me citaron para ir a buscar la respuesta a mi solicitud, ¿debo ir?<a class="hover_a" href="#ir_a_buscar">#</a> </h1>
+
+<p>¡No! No estás obligado a comparecer personalmente para retirar la respuesta a tu solicitud. Como dijimos antes, la respuesta tiene que darse por medios digitales y excepcionalmente podrían enviártela por correo postal.</p>
+<p>Es a veces una mala práctica de los organismos citar personalmente a los solicitantes para que ratifiquen el pedido o bien para retirar la respuesta. ¡No está bien que lo hagan! En tal caso, podés reclamar para que te provean los documentos por medios digitales (ver sección <a href="https://derechoaldato.com.ar/es_AR/help/unhappy">respuestas insatisfactorias</a>).</p>
+
+<h1 id="embebido">Me enviaron un archivo “embebido”, ¿es una broma?<a class="hover_a" href="#embebido">#</a> </h1>
+
+<p>
+No, aunque pueda causar gracia al común de los mortales, así es como llaman algunas autoridades a los archivos adjuntos que puede contener un PDF.
+</p> 
+<p>
+Debés tener instalado en tu PC el programa Adobe Reader. Si no lo tenés, o no está actualizado, lo podés descargar gratuitamente <a href="https://get.adobe.com/es/reader/">(get.adobe.com/es/reader/)</a>. El navegador web no te permite ver los archivos adjuntos.
 </p>
-
-<p><%= site_name %> has no special facilities for handling a request at this stage - it
-  passes into the Information Commissioner's system. You can leave annotations on your
-  request keeping people informed of progress.</p>
-
-<p>A warning. There is a backlog of work at the Information Commissioner, and
-  it can take literally years to get resolution from them. If you reach this point,
-  you should accept that you won't get the information quickly by this means. Maybe
-  you want to help the fight to improve Freedom of Information, or maybe
-  getting the information slowly is still worthwhile. You can also try and
-  get the information by <strong>other means...</strong></p>
-
-<h1 id="other_means">3. Using other means to answer your question <a class="hover_a" href="#other_means">#</a> </h1>
-
-<p>You can try persuing your problem or your research in other ways.</p>
-
-<ul>
-  <li>Make a <strong>new FOI request</strong> for summary information, or for
-    documentation relating indirectly to matters in your refused request.
-    <a href="<%= help_contact_path %>">Ask us for ideas</a> if you're stuck.</li>
-  <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
-    then make FOI requests to them.</li>
-  <li>Write to <strong>your MP</strong> or other politician using <a
-       href="http://www.writetothem.com">WriteToThem</a> and ask for their help
-     finding the answer. MPs can write directly to ministers or departments, and
-     can ask written questions in the House of Commons. Councillors in local authorities
-     can talk directly to council officers.</li>
-  <% if can_ask_the_eu?(@country_code) %>
-    <li>
-      Try <%= link_to 'asking for the information from the European Union',
-      'http://www.asktheeu.org' %>. Every one of the 500 million people
-      living in the European Union (both citizens and residents) has the
-      legally guaranteed right to ask for information from EU authorities.
-      <%= link_to 'Ask The EU', 'http://www.asktheeu.org' %> is a version of
-      this website for the European Union.
-    </li>
-  <% end %>
-  <li>Ask <strong>other researchers</strong> who are interested in a similar
-    issue to yours for ideas. You can sometimes find them by browsing this site;
-    contact any registered user from their page. There may be an Internet
-    forum or group that they hang out in. If it is a local matter, use <a
-       href="http://www.groupsnearyou.com">GroupsNearYou</a> to find such a
-     forum.</li>
-  <li>You could form a small local campaign group and arrange a meeting
-    with staff from the authority.</li>
-</ul>
+<p>
+Para abrir los archivos embebidos tenés que abrir el PDF desde tu PC con el programa Adobe Reader y hacer click en el ícono del clip que está en sobre la izquierda del documento. Allí se desplegará una lista con los archivos embebidos al PDF.
+</p>
